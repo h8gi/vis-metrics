@@ -1,6 +1,6 @@
 import { DataInterfaceEdges, DataInterfaceNodes } from 'vis-network';
 
-export const centrality = (edges: DataInterfaceEdges, nodes: DataInterfaceNodes) => {
+export const centrality = (nodes: DataInterfaceNodes, edges: DataInterfaceEdges) => {
   edges.forEach((edge, id) => {
     console.log(edge, id)
   })
@@ -8,6 +8,8 @@ export const centrality = (edges: DataInterfaceEdges, nodes: DataInterfaceNodes)
   nodes.forEach((node, id) => {
     console.log(node, id)
   })
+
+  return 1;
 }
 
 export const sum = (a: number, b: number) => {
