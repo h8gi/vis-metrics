@@ -12,6 +12,10 @@ export const centrality = (nodes: DataInterfaceNodes, edges: DataInterfaceEdges)
   return 1;
 }
 
+export const density = (nodes: DataInterfaceNodes, edges: DataInterfaceEdges) => {
+  return edges.length / (nodes.length * (nodes.length - 1))
+}
+
 export const sum = (a: number, b: number) => {
   if ('development' === process.env.NODE_ENV) {
     console.log('boop');
